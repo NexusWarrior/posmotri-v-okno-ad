@@ -61,7 +61,7 @@ ol {
 }
 
 .result {
-  flex-shrink: 0;
+  flex-shrink: 0; /* запрещает сжимать левую колонку */
   width: 711px;
 }
 
@@ -88,7 +88,7 @@ ol {
   display: flex;
   flex: 1;
   flex-direction: column;
-  align-self: stretch;
+  align-self: stretch; /* растягивает правую колонку по высоте общего ряда */
   justify-content: flex-end;
   gap: 26px;
   min-width: 0;
@@ -149,8 +149,8 @@ ol {
   overflow: hidden;
   font-size: 30px;
   line-height: 1;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  text-overflow: ellipsis; /* многоточие при переполнении строки */
+  white-space: nowrap; /* запрет переноса на новую строку */
 }
 
 .content__video-card-description {
@@ -176,8 +176,8 @@ ol {
   inline-size: 1px;
   block-size: 1px;
   overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
+  clip: rect(0 0 0 0); /* обрезает по прямоугольнику нулевого размера, работает в абсолютном потоке */
+  clip-path: inset(50%); /* обрезает область с каждой стороны на 50% */
   white-space: nowrap;
 }
 
@@ -200,7 +200,7 @@ ol {
   display: flex;
   align-items: center;
   gap: 5px;
-  width: fit-content;
+  width: fit-content; /* ширина по содержимому в доступном пространстве */
 }
 
 .search-form__textfield {
@@ -212,7 +212,7 @@ ol {
   color: inherit;
   font: inherit;
   background-color: transparent;
-  appearance: none;
+  appearance: none; /* отключение стандартного оформления поля */
 }
 
 .search-form__textfield::placeholder {
@@ -220,7 +220,7 @@ ol {
 }
 
 .search-form__textfield:focus {
-  outline: none;
+  outline: none; /* отключение обводку */
 }
 
 .search-form__label:has(:focus-visible) {
